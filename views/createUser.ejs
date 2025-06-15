@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-  </head>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+</head>
+
 <body>
-  <h1><%= title %></h1>
+  <h1>
+    <%= title %>
+  </h1>
   <%- include("partials/errors.ejs") %>
-  <form action="/create" method="POST">
-    <label for="firstName">First Name: </label>
-    <input type="text" name="firstName" id="firstName" required>
-    <label for="lastName">Last Name: </label>
-    <input type="text" name="lastName" id="lastName" required>
-    <label for="email">Email: </label>
-    <input type="email" name="email" id="email" required>
-    <label for="age">Age: </label>
-    <input type="number" name="age" id="age">
-    <label for="bio">Bio: </label>
-    <textarea name="bio" id="bio" rows="3" cols="20" maxlength="200"></textarea>
-    <button type="submit">Submit</button>
-  </form>
-  <a href="/">Back to home</a>
+    <form action="/create" method="POST">
+      <label for="firstName">First Name: </label>
+      <input type="text" name="firstName" id="firstName" required>
+      <label for="lastName">Last Name: </label>
+      <input type="text" name="lastName" id="lastName" required>
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email" required>
+      <label for="age">Age: </label>
+      <input type="number" name="age" id="age">
+      <label for="bio">Bio: </label>
+      <textarea name="bio" id="bio" rows="3" cols="20" maxlength="200"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <a href="/">Back to home</a>
+
+    <form action="/search" method="get">
+      <label for="firstName">Search First Name: </label>
+      <input type="text" name="firstName" id="firstName">
+      <label for="email">Search Email: </label>
+      <input type="email" name="email" id="email">
+      <button type="submit">Search user</button>
+    </form>
 </body>
+
 </html>

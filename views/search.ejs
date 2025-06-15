@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+</head>
+
+<body>
+    <h1><%= title %></h1>
+    <ul>
+        <% if (locals.results) {%>
+          <% results.forEach(function(result) { %>
+            <li>ID: <%= result.id %>, Name: <%= result.firstName %> <%= result.lastName %>, Email: <%= result.email%>, Age: <%= result.age%>, Bio: <%= result.bio%> </li>
+          <% }); %>
+        <% } %>
+      </ul>
+
+</body>
+
+</html>
